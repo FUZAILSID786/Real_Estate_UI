@@ -1,0 +1,16 @@
+.textContainer{
+    flex:3;
+}
+
+.imgContainer{
+    flex:2;
+    position: relative;
+}
+
+.imgContainer img{
+    max-width: 115%;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}
