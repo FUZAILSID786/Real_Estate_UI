@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div className="homePage flex h-full">
         <div className="textContainer">
-          <div className="wrapper flex flex-col justify-center gap-12 h-full pr-24">
+          <div className="wrapper flex flex-col justify-center gap-12 h-full p-">
           <h1 className='title font-bold text-5xl'>Find Real Estate & Get Your Dream Place.</h1>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, tempora placeat nostrum cupiditate laboriosam sunt veniam id esse veritatis quos animi eos natus perspiciatis ipsam quod porro! Ea, alias nemo?</p>
           <Searchbar/>

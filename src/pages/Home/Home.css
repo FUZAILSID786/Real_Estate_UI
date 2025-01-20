@@ -1,3 +1,13 @@
+@media screen and (max-width: 1024px){
+    .imgContainer{
+        display: none;
+    }
+}
+
+.wrapper{
+    padding: 80px;
+}
+
 .textContainer{
     flex:3;
 }
@@ -13,4 +23,15 @@
     right: 0px;
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width:768px){
+    .boxes{
+        display: none;
+    }
+
+    .wrapper{
+        justify-content: flex-start;
+        padding: 0px 40px;
+    }
 }

@@ -26,9 +26,9 @@ const Searchbar = () => {
         ))}
       </div>
       <form action="">
-        <input type="text" name='' placeholder='City Location'/>
-        <input type="number" name='' placeholder='Min Price'/>
-        <input type="number" name='' placeholder='Max Price'/>
+        <input className='max-xl:pl-1 pr-1' type="text" name='' placeholder='City Location'/>
+        <input className='max-xl:pl-1 pr-1' type="number" name='' placeholder='Min Price'/>
+        <input className='max-xl:pl-1 pr-1' type="number" name='' placeholder='Max Price'/>
         <button>
           <img src="search.png" alt="" />
         </button>

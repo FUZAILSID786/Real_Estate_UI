@@ -5,10 +5,10 @@ import Home from './pages/Home/Home'
 const App = () => {
   return (
     <>
-      <div className='max-2xl:font-sans h-screen max-w-7xl ml-auto mr-auto pl-5 pr-5 flex flex-col
+      <div className='max-2xl:font-sans overflow-hidden h-screen max-w-7xl ml-auto mr-auto pl-5 pr-5 flex flex-col
       max-xl:
       max-lg:
-      max-md:'>
+      max-md:overflow-y-scroll pb-60'>
         <div className="navbar">
           <Navbar/>
         </div>

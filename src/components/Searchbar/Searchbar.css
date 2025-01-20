@@ -1,13 +1,12 @@
-.type button{
+.type button {
     border-bottom: none;
     padding: 16px 36px;
     border: 1px solid #999;
     cursor: pointer;
     text-transform: capitalize;
-    
 }
 
-.type .active{
+.type .active {
     background: #000;
     color: white;
 }
@@ -16,31 +15,85 @@
     border-top-left-radius: 5px;
     border-right: none;
 }
+
 .type button:last-child {
     border-top-right-radius: 5px;
     border-left: none;
 }
 
-form{
+form {
     border: 1px solid #999;
     display: flex;
     justify-content: space-between;
     height: 64px;
-    width: 640px;
+    width: auto;
 }
 
-form input{
+form input {
     border: none;
-    padding: 0px 10px;
-    width: 190px;
+    width: 100%;
 }
 
-form button{
+form button {
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     cursor: pointer;
     background: #fece51;
-    flex: 1;
+}
+
+form button img{
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1280px) {
+    form { /* Stack inputs and button vertically */
+        height: 64px; /* Adjust height for wrapping content */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    form:nth-child(2),form:nth-child(3){
+        width: auto;
+    }
+
+    form input {
+        width: 100%; /* Full width for inputs */
+        height: 62px;
+    }
+
+    form button {
+        width: 150px; /* Full width for the button */
+        height: 62.5px; /* Adjust height for better touch targets */
+    }
+}
+
+@media screen and (max-width:768px) {
+
+
+    form {
+        flex-direction: column;
+        border: 1px solid #999;
+    }   
+    
+
+    
+    form input{
+        margin-bottom: 5px;
+        width: auto;
+        padding: 20px;
+        border: 1px solid #999;
+    }
+
+    form:nth-child(2),form:nth-child(3){
+        width: auto;
+    }
+
+    form button{
+        width: 100%;
+        padding: 10px;
+    }
 }
