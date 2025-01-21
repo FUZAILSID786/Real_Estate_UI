@@ -1,0 +1,17 @@
+.ListPage{
+    display: flex;
+    height: 100vh;
+}
+
+.listContainer{
+    flex:3;
+}
+
+.listwrapper{
+    padding-right: 40px;
+}
+
+.mapContainer{
+    flex:2;
+    background: #ffedd5;
+}
