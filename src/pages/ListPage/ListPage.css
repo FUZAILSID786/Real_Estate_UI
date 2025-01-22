@@ -5,13 +5,20 @@
 
 .listContainer{
     flex:3;
+    overflow-y: scroll;
 }
 
 .listwrapper{
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 150px;
+    /* overflow-y: scroll; */
 }
 
 .mapContainer{
     flex:2;
+    height: 100%;
     background: #ffedd5;
 }

@@ -1,0 +1,17 @@
+.popCont{
+    display: flex;
+    gap: 20px;
+}
+
+.popCont img{
+    width: 64px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.txtCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
