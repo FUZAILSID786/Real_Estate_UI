@@ -7,6 +7,7 @@ import {
 import ListPage from './pages/ListPage/ListPage';
 import Layout from './pages/Layout/Layout';
 import SinglePage from './pages/SinglePage/SinglePage';
+import Profilepage from './pages/Profilepage/Profilepage';
 
 const App = () => {
 
@@ -26,6 +27,10 @@ const App = () => {
         {
           path:"/:id",
           element:<SinglePage/>
+        },
+        {
+          path:"/profile",
+          element:<Profilepage/>
         }
       ]
     }

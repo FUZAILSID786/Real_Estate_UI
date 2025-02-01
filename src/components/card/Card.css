@@ -63,13 +63,13 @@
     gap: 10px;
 }
 
-.features{
+.card .features{
     display: flex;
     gap: 20px;
     font-size: 14px;
 }
 
-.feature{
+.card .feature{
     display: flex;
     align-items: center;
     gap: 5px;
