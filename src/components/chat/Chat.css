@@ -1,0 +1,122 @@
+.chat{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat .messages{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+.message{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+    cursor: pointer;
+}
+
+.message span{
+    font-weight: bold;
+}
+
+.messages h1{
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.messages .message img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat .chatBox{
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+}
+
+.chatBox .chattop{
+    background-color: #f7c14b85;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatBox .chattop .user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.chatBox .chattop .user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chatBox .X{
+    cursor: pointer;
+}
+
+.chatBox .chatcenter{
+    height: 350px;
+    display: flex;
+    overflow-y: scroll;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chatcenter .chatMessage{
+    width: 50%;
+}
+
+.own{
+    align-self: flex-end;
+    text-align: right;
+}
+
+.own span{
+    font-size: 12px;
+    background-color: #f7c14b85;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.chatBox .chatbottom{
+    border-top: 2px solid #f7c14b85;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatBox .chatbottom textarea{
+    flex: 3;
+    height: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.chatBox .chatbottom button{
+    flex: 1;
+    background-color: #f7c14b85;
+    height: 100%;
+    border: none;
+}

@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
     const [open,setOpen] = useState(false);
+
+    const user = true;
+
   return (
       <nav className="h-24 flex justify-between items-center">
       <div className="left w-2/3 flex items-center gap-11 font-bold">
@@ -17,8 +21,15 @@ const Navbar = () => {
         <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Agents</a>
       </div>
       <div className="right w- flex items-center justify-end bg-orange-100 h-full font-bold max-lg:bg-transparent">
-      <a href="/" className="transition-all duration-300 ease hover:scale-105 m-5 max-md:hidden">Sign In</a>
-      <a href="/" className="bg-yellow-400 pt-3 pb-3 pl-6 pr-6 m-5 transition-all duration-300 ease hover:scale-105 max-md:hidden">Sign Up</a>
+      {user ? (<div className='user'>
+        <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+        <span>John Doe</span>
+        <Link to="/profile" className='profile'>
+          <div className="notification">3</div>
+          <span>Profile</span>
+        </Link>
+      </div>) : (<><a href="/" className="transition-all duration-300 ease hover:scale-105 m-5 max-md:hidden">Sign In</a>
+      <a href="/" className="bg-yellow-400 pt-3 pb-3 pl-6 pr-6 m-5 transition-all duration-300 ease hover:scale-105 max-md:hidden">Sign Up</a></>)}
       </div>
       <div className="menuIcon z-50">
         <img className="hidden max-md:block w-9 h-9  cursor-pointer" src="/menu.png" onClick={() => setOpen((prev)=> !prev)} />

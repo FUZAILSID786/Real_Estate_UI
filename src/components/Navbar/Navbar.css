@@ -1,3 +1,41 @@
 .right{
     width: 44.4%;
 }
+
+.right .user{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.right .user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.profile{
+    padding: 12px 24px;
+    background-color: #fece51;
+    cursor: pointer;
+    border: none;
+    margin-left: 30px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.profile .notification{
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -8px;
+    right: -8px;
+}
