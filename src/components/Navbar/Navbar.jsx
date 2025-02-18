@@ -18,7 +18,6 @@ const Navbar = () => {
         <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Home</a>
         <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">About</a>
         <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Contact</a>
-        <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Agents</a>
       </div>
       <div className="right w- flex items-center justify-end bg-orange-100 h-full font-bold max-lg:bg-transparent">
       {user ? (<div className='user'>
@@ -38,7 +37,6 @@ const Navbar = () => {
       <a href="/" classNameName="transition-all duration-300 ease hover:scale-105 max-md:inline">Home</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">About</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Contact</a>
-      <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Agents</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Sign in</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Sign up</a>
       </div>
