@@ -54,6 +54,17 @@
     object-fit: cover;
 }
 
+.info button{
+    width: 100px;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 .profilepage .chatContainer{
     flex: 2;
     background-color: #fcf5f3;

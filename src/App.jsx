@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ListPage from './pages/ListPage/ListPage';
-import Layout from './pages/Layout/Layout';
+import {Layout , RequireAuth} from './pages/Layout/Layout';
 import SinglePage from './pages/SinglePage/SinglePage';
 import Profilepage from './pages/Profilepage/Profilepage';
 import Register from './pages/Register/Register'
@@ -31,10 +31,6 @@ const App = () => {
           element:<SinglePage/>
         },
         {
-          path:"/profile",
-          element:<Profilepage/>
-        },
-        {
           path:"/register",
           element:<Register/>
         },
@@ -43,12 +39,20 @@ const App = () => {
           element:<Login/>
         }
       ]
-    }
+    },
+    {
+      path:"/",
+      element:<RequireAuth />,
+      children:[
+        {
+          path:"/profile",
+          element:<Profilepage/>,
+        },
+      ],
+    },
   ]);
 
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />
 }
 
-export default App
+export default App;
