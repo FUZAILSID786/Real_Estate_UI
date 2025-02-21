@@ -3,7 +3,7 @@ import "./Profilepage.css"
 import List from '../../components/list/List'
 import Chat from '../../components/chat/Chat'
 import apiRequest from '../../lib/apiRequest.js'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext.jsx'
 
 const Profilepage = () => {
@@ -30,7 +30,9 @@ const Profilepage = () => {
         <div className="wrap">
           <div className="title">
             <h1>User Information</h1>
+            <Link to="/profile/update">
             <button>Update Profile</button>
+            </Link>
           </div>
           <div className="info">
             <span>Avatar: <img src={currentUser.avatar || "/noavatar.jpg"} alt="" /></span>

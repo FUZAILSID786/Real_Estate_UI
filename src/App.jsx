@@ -8,6 +8,7 @@ import ListPage from './pages/ListPage/ListPage';
 import {Layout , RequireAuth} from './pages/Layout/Layout';
 import SinglePage from './pages/SinglePage/SinglePage';
 import Profilepage from './pages/Profilepage/Profilepage';
+import ProfileUpdatePage from './pages/ProfileUpdatePage/ProfileUpdatePage';
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login';
 
@@ -47,6 +48,10 @@ const App = () => {
         {
           path:"/profile",
           element:<Profilepage/>,
+        },
+        {
+          path:"/profile/update",
+          element:<ProfileUpdatePage/>,
         },
       ],
     },
