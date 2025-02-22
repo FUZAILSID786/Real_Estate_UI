@@ -1,0 +1,82 @@
+.newPostPage {
+    height: 100vh;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.newPostPage-formContainer {
+    flex: 3;
+    overflow: scroll;
+}
+.newPostPage-formContainer h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.newPostPage-wrapper {
+    margin: 30px 50px 100px 0px;
+}
+
+.newPostPage-formContainer form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: none;
+}
+
+.newPostPage-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.newPostPage-item label {}
+
+.newPostPage-item input {
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.newPostPage-item select {
+    padding: 19px;
+    border: 1px solid black;
+}
+
+.newPostPage-item textarea {
+    border: 1px solid black;
+    width: 100%;
+    height: 320px;
+    font-size: 16px;
+
+}
+
+.newPostPage .sendButton {
+    width: 30%;
+    border-radius: 5px;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 15px;
+}
+
+.newPostPage-sideContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.newPostPage-sideContainer img {
+    width: 50%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}

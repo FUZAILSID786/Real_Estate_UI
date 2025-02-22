@@ -11,6 +11,8 @@ import Profilepage from './pages/Profilepage/Profilepage';
 import ProfileUpdatePage from './pages/ProfileUpdatePage/ProfileUpdatePage';
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login';
+import NewPostPage from './pages/NewPostPage/NewPostPage';
+import { singlePageLoader } from './lib/loaders';
 
 const App = () => {
 
@@ -29,7 +31,8 @@ const App = () => {
         },
         {
           path:"/:id",
-          element:<SinglePage/>
+          element:<SinglePage/>,
+          loader:singlePageLoader,
         },
         {
           path:"/register",
@@ -52,6 +55,10 @@ const App = () => {
         {
           path:"/profile/update",
           element:<ProfileUpdatePage/>,
+        },
+        {
+          path:"/add",
+          element:<NewPostPage/>
         },
       ],
     },
