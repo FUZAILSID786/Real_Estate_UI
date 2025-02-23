@@ -6,7 +6,7 @@ const Card = ({item}) => {
   return (
     <div className='card'>
       <Link to={`/${item.id}`} className='imageCont' >
-        <img src={item.img} alt="" />
+        <img src={item.images[0]} alt="" />
       </Link>
       <div className="textCont"> 
         <h2 className="title">

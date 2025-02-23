@@ -44,6 +44,14 @@ form button {
     background: #fece51;
 }
 
+form a {
+    flex: 1;
+    background-color: #fece51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 form button img{
     width: 24px;
     height: 24px;
