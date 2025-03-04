@@ -12,7 +12,7 @@ import ProfileUpdatePage from './pages/ProfileUpdatePage/ProfileUpdatePage';
 import Register from './pages/Register/Register'
 import Login from './pages/Login/Login';
 import NewPostPage from './pages/NewPostPage/NewPostPage';
-import { listPageLoader, singlePageLoader } from './lib/loaders';
+import { listPageLoader, profilePageLoader, singlePageLoader } from './lib/loaders';
 
 const App = () => {
 
@@ -52,6 +52,7 @@ const App = () => {
         {
           path:"/profile",
           element:<Profilepage/>,
+          loader:profilePageLoader
         },
         {
           path:"/profile/update",
