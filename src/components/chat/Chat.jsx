@@ -1,41 +1,42 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./Chat.css"
+import { AuthContext } from '../../context/AuthContext';
+import apiRequest from '../../lib/apiRequest';
 
-const Chat = () => {
-    const [chat,setChat] = useState(true);
+const Chat = ({chats}) => {
+    const [chat,setChat] = useState(null);
+    const {currentUser} = useContext(AuthContext);
+
+    const handleOpenChat = async (id,receiver) => {
+        try {
+            const res = await apiRequest("/chats/"+id)
+            setChat({...res.data, receiver})
+        } catch (err) {
+            console.log(err)
+        }
+    }
   return (
     <div className='chat'>
       <div className="messages">
         <h1>Messages</h1>
-        <div className="message">
-            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            <span>John Doe</span>
+        {
+        chats.map((c)=>(
+        <div className="message" key={c.id} 
+        style={{
+            backgroundColor:c.seenBy.includes(currentUser.id) ? "white" : "#fecd514e"
+        }}
+        onClick={()=>handleOpenChat(c.id,c.receiver)}
+        >
+            <img src={c.receiver.avatar || "/noavatar.jpg"} alt="" />
+            <span>{c.receiver.username}</span>
             <p>
-                Lorem ipsum dolor sit....
+               {c.lastMessage}
             </p>
         </div>
-        <div className="message">
-            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            <span>John Doe</span>
-            <p>
-                Lorem ipsum dolor sit....
-            </p>
-        </div>
-        <div className="message">
-            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            <span>John Doe</span>
-            <p>
-                Lorem ipsum dolor sit....
-            </p>
-        </div>
-        <div className="message">
-            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            <span>John Doe</span>
-            <p>
-                Lorem ipsum dolor sit....
-            </p>
-        </div>
-      </div>
+            ))
+}
+        
+    </div>
       {chat && (<div className="chatBox">
         <div className="chattop">
             <div className="user">
