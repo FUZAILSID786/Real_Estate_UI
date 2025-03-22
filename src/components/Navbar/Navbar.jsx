@@ -24,8 +24,8 @@ const Navbar = () => {
             <div className="max-md:block max-lg:hidden">Propsource</div>
         </a>
         <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Home</a>
-        <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">About</a>
-        <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Contact</a>
+        <a href="/about" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">About</a>
+        <a href="/contact" className="transition-all duration-300 ease hover:scale-105 max-md:hidden">Contact</a>
       </div>
       <div className="right w- flex items-center justify-end bg-orange-100 h-full font-bold max-lg:bg-transparent">
       {currentUser ? (<div className='user'>
@@ -43,8 +43,8 @@ const Navbar = () => {
       </div>
       <div className={open ? "menu hidden max-md:flex absolute top-0 right-0 bg-black text-white h-screen w-2/5 transition-all duration-300 ease-in flex-col justify-center items-center text-2xl gap-7":"menu hidden max-md:flex flex-col absolute top-0 -right-1/2 bg-black text-white h-screen w-2/5 transition-all duration-300 ease-in justify-center items-center text-xl font-bold gap-7"}>
       <a href="/" classNameName="transition-all duration-300 ease hover:scale-105 max-md:inline">Home</a>
-      <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">About</a>
-      <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Contact</a>
+      <a href="/about" className="transition-all duration-300 ease hover:scale-105 max-md:inline">About</a>
+      <a href="/contact" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Contact</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Sign in</a>
       <a href="/" className="transition-all duration-300 ease hover:scale-105 max-md:inline">Sign up</a>
       </div>

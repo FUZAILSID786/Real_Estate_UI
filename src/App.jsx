@@ -13,6 +13,8 @@ import Register from './pages/Register/Register'
 import Login from './pages/Login/Login';
 import NewPostPage from './pages/NewPostPage/NewPostPage';
 import { listPageLoader, profilePageLoader, singlePageLoader } from './lib/loaders';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 const App = () => {
 
@@ -24,6 +26,14 @@ const App = () => {
         {
           path:"/",
           element:<Home/>
+        },
+        {
+          path:"/about",
+          element:<About/>
+        },
+        {
+          path:"/contact",
+          element:<Contact/>
         },
         {
           path:"/list",
